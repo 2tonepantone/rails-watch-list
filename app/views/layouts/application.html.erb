@@ -9,7 +9,20 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <%= link_to "SimpleAirbnb", flats_path, class: "btn btn-light" %>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search" value="<%= params[:query] %>">
+          <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to "Add Flat", new_flat_path, class: "btn btn-light" %>
+          </li>
+        </ul>
+      </div>
+    </div>
   <body>
     <%= yield %>
   </body>
