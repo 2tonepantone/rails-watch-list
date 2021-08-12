@@ -1,2 +1,18 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<div class="container mt-5">
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-trip">
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= list.name %></h2>
+          </div>
+        </div>
+        <div class="card-footer">
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"><%= link_to 'More info', list_path(list) %></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
