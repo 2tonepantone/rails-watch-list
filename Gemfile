@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Added by myself
 gem 'autoprefixer-rails', '10.2.5'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
