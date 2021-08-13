@@ -18,10 +18,10 @@ Movie.create(title: "Ocean's Eight",
              rating: 7.0)
 puts 'Finished adding movies to your DB!!!'
 
-puts 'Adding lists to your DB...'
-List.create(name: 'Action')
-List.create(name: 'Comedy')
-List.create(name: 'Drama')
-List.create(name: 'Documentary')
-List.create(name: 'Horror')
-puts 'Finished adding list to your DB!!!'
+# puts 'Adding lists to your DB...'
+# List.create(name: 'Action')
+# List.create(name: 'Comedy')
+# List.create(name: 'Drama')
+# List.create(name: 'Documentary')
+# List.create(name: 'Horror')
+# puts 'Finished adding list to your DB!!!'
