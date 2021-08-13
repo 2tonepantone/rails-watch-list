@@ -1,18 +1,10 @@
 <div class="container mt-5">
   <div class="cards">
     <% @lists.each do |list| %>
-      <div class="card-trip">
-        <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= list.name %></h2>
-          </div>
-        </div>
-        <div class="card-footer">
-          <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><%= link_to 'More info', list_path(list) %></li>
-          </ul>
-        </div>
+      <div class="card-category" style="background-image:
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(<%= cl_image_path list.photo.key, height: 300, width: 400, crop: :fill %>)">
+        <h2><%= list.name %></h2>
       </div>
     <% end %>
   </div>
