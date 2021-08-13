@@ -1,7 +1,6 @@
-<div class="container mt-5">
-  <div class="container-header">
-    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
-    <h1><%= @list.name %></h1>
+<%= render 'lists/banner', list: @list %>
+<div class="container mt-2">
+  <div class="container-header d-flex justify-content-end mb-2">
     <%= link_to "Add movie", new_list_bookmark_path(@list), class: "btn btn-light" %>
   </div>
   <div class="cards">
@@ -16,13 +15,13 @@
             <p><%= movie.overview %></p>
           </div>
         </div>
-        <div class="card-footer d-flex justify-content-between">
+        <div class="card-footer h-100 d-flex justify-content-between">
           <p><%= bookmark.comment %></p>
           <%= link_to '🗑', bookmark_path(bookmark), method: "DELETE",
-              data: {confirm: "Do you really want to delete #{movie.title}?"} %>
-        </ul>
+              data: {confirm: "Do you really want to delete #{movie.title}?"},
+              class: "btn btn-light"%>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
